@@ -1,0 +1,44 @@
+name: Build Test APK
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      # 调试步骤 (可选)
+      - name: List files
+        run: ls -la
+
+      # 替换无效的exists判断 → 使用标准shell条件 ✅
+      - name: Create Gradle Wrapper
+        run: |
+          if [ ! -f "gradlew" ]; then
+            echo "生成Gradle包装器..."
+            # 使用Gradle生成器
+            wget https://gradle.org/install
+            chmod +x gradle
+            ./gradle wrapper
+          else
+            echo "gradlew已存在，跳过生成"
+          fi
+
+      - name: Set file permissions
+        run: chmod +x gradlew  # 确保有执行权限
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+
+      - name: Build APK
+        run: ./gradlew assembleRelease
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
