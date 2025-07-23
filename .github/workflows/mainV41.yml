@@ -1,0 +1,38 @@
+name: Build Test APK
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 确保获取所有历史记录（包含初始提交）
+
+      - name: List project files (调试)
+        run: ls -la  # 检查gradlew是否存在
+
+      - name: Create Gradle Wrapper (自动修复)
+        if: !exists('gradlew')  # 如果不存在gradlew则创建
+        run: |
+          ./gradlew wrapper  # 尝试生成gradlew
+          # 如果失败则手动安装Gradle
+          sudo apt-get install -y gradle
+          gradle wrapper
+
+      - name: Set file permissions
+        run: chmod +x gradlew  # 确保有执行权限
+
+      - name: Set up JDK
+        uses: actions/setup-java@v4
+        with:
+          java-version: '11'
+
+      - name: Build APK
+        run: ./gradlew assembleRelease  # 现在应该能找到gradlew
+
+      - name: Upload APK
+        uses: actions/upload-artifact@v4
+        with:
+          name: app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
