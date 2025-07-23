@@ -1,0 +1,21 @@
+name: Build Test APK
+on: [push]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up JDK
+        uses: actions/setup-java@v4  # 必须是 v4
+        with:
+          java-version: '11'
+          
+      - name: Build APK
+        run: ./gradlew assembleRelease
+        
+      - name: Upload APK  # 您当前缺少此步骤的正确配置！
+        uses: actions/upload-artifact@v4  # 必须使用 v4
+        with:
+          name: app-release.apk
+          path: app/build/outputs/apk/release/app-release.apk
