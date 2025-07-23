@@ -8,7 +8,7 @@ import time
 CONFIG_FILE = "client_config.json"
 
 # 这里可以直接指定一个固定IP，优先级最高
-FIXED_IP = "192.168.66.24"
+FIXED_IP = "192.168.25.47"
 # 例如：FIXED_IP = "192.168.1.101"
 
 def get_ip_from_config():
