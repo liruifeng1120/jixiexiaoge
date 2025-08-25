@@ -163,13 +163,4 @@ CSLC（Curvature Speed Limit Control）是我们独创的曲率速度限制控�
 - 🔄 分享给更多车友，让更多人受益
 - ☕ 赞助开发者，助力项目持续优化
 
-## 💝 赞助支持
-您的支持是我们持续优化的动力！赞助任意金额即可加入内测群，抢先体验最新功能！
 
-![赞赏码](https://github.com/jixiexiaoge/iFreeFlow/blob/V2/buymeacoffe.png)
-
-## 📞 联系我们
-- 🌟 知识星球：[点击加入精英车主社区](https://wx.zsxq.com/group/15555844842822)
-
----
-特别感谢每一位支持者，让我们一起打造更好的自动驾驶体验！
