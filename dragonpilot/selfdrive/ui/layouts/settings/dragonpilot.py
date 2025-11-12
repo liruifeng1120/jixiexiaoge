@@ -285,7 +285,8 @@ class DragonpilotLayout(Widget):
       # Check engaged again in case it changed while the dialog was open
       if result != DialogResult.CONFIRM:
         return
-      self._params.put_bool_nonblocking("dp_dev_reset_conf", True)
+      self._params.put_bool("dp_dev_reset_conf", True)
+      self._params.put_bool("DoReboot", True)
 
     dialog = ConfirmDialog(tr("Are you sure you want to reset ALL DP SETTINGS to default?"), tr("Reset"))
     gui_app.set_modal_overlay(dialog, callback=reset_dp_conf)
