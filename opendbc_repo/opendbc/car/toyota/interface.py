@@ -58,12 +58,12 @@ class CarInterface(CarInterfaceBase):
       ret.flags |= ToyotaFlags.HYBRID.value
 
     # 0x343 should not be present on bus 2 on cars other than TSS2_CAR unless we are re-routing DSU
+    # we have to disble it by default, it breaks multiple cars (e.g. TOYOTA_AVALON_2019 model tests, TOYOTA_PRIUS in live).
     dsu_bypass = False
-    if (0x343 in fingerprint[2] or 0x4CB in fingerprint[2]) and candidate not in TSS2_CAR:
+    if False: #(0x343 in fingerprint[2] or 0x4CB in fingerprint[2]) and candidate not in TSS2_CAR:
       print("----------------------------------------------")
       print("dragonpilot: DSU_BYPASS detected!")
       print("----------------------------------------------")
-      # rick: breaks TOYOTA_AVALON_2019 model tests.
       dsu_bypass = True
       ret.flags |= ToyotaFlags.DSU_BYPASS.value
 
