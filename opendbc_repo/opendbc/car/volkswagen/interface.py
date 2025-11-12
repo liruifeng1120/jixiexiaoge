@@ -37,6 +37,14 @@ class CarInterface(CarInterfaceBase):
       # Panda ALLOW_DEBUG firmware required.
       ret.dashcamOnly = True
 
+    elif ret.flags & VolkswagenFlags.MEB:
+      # Set global MEB parameters
+      ret.safetyConfigs = [get_safety_config(structs.CarParams.SafetyModel.volkswagenMeb)]
+      ret.enableBsm = 0x24C in fingerprint[0]  # MEB_Side_Assist_01
+      ret.steerControlType = structs.CarParams.SteerControlType.angle
+      ret.transmissionType = TransmissionType.direct
+      ret.networkLocation = NetworkLocation.fwdCamera
+
     else:
       # Set global MQB parameters
       ret.safetyConfigs = [get_safety_config(structs.CarParams.SafetyModel.volkswagen)]

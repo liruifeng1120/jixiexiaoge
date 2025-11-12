@@ -3,8 +3,8 @@ from opendbc.can import CANPacker
 from opendbc.car import Bus, DT_CTRL, apply_driver_steer_torque_limits, structs
 from opendbc.car.common.conversions import Conversions as CV
 from opendbc.car.interfaces import CarControllerBase
-from opendbc.car.volkswagen import mqbcan, pqcan
-from opendbc.car.volkswagen.values import CANBUS, CarControllerParams, VolkswagenFlags
+from opendbc.car.volkswagen import mqbcan, pqcan, mebcan
+from opendbc.car.volkswagen.values import CanBus, CarControllerParams, VolkswagenFlags
 
 VisualAlert = structs.CarControl.HUDControl.VisualAlert
 LongCtrlState = structs.CarControl.Actuators.LongControlState
@@ -14,12 +14,21 @@ class CarController(CarControllerBase):
   def __init__(self, dbc_names, CP):
     super().__init__(dbc_names, CP)
     self.CCP = CarControllerParams(CP)
-    self.CCS = pqcan if CP.flags & VolkswagenFlags.PQ else mqbcan
+    if CP.flags & VolkswagenFlags.PQ:
+      self.CCS = pqcan
+    elif CP.flags & VolkswagenFlags.MEB:
+      self.CCS = mebcan
+    else:
+      self.CCS = mqbcan
     self.packer_pt = CANPacker(dbc_names[Bus.pt])
-    self.ext_bus = CANBUS.pt if CP.networkLocation == structs.CarParams.NetworkLocation.fwdCamera else CANBUS.cam
+    self.CAN = CanBus(CP)
+    self.ext_bus = self.CAN.main if CP.networkLocation == structs.CarParams.NetworkLocation.fwdCamera else self.CAN.camera
     self.aeb_available = not CP.flags & VolkswagenFlags.PQ
+    self.openpilot_longitudinal = self.CP.openpilotLongitudinalControl and not self.CP.flags & VolkswagenFlags.MEB
 
     self.apply_torque_last = 0
+    self.apply_curvature_last = 0
+    self.apply_steer_power_last = 0
     self.gra_acc_counter_last = None
     self.eps_timer_soft_disable_alert = False
     self.hca_frame_timer_running = 0
