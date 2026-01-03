@@ -1,6 +1,6 @@
 from opendbc.car.changan.values import DBC, CarControllerParams, EPS_SCALE
 from opendbc.car import structs, get_safety_config
-from opendbc.car.disable_ecu import disable_ecu
+from opendbc.car.common.conversions import Conversions as CV
 from opendbc.car.interfaces import CarInterfaceBase
 from opendbc.car.changan.carcontroller import CarController
 from opendbc.car.changan.carstate import CarState
@@ -25,7 +25,7 @@ class CarInterface(CarInterfaceBase):
       return CarControllerParams.ACCEL_MIN, CarControllerParams.ACCEL_MAX
 
   @staticmethod
-  def _get_params(ret: structs.CarParams, candidate, fingerprint, car_fw, experimental_long, docs) -> structs.CarParams: # type: ignore
+  def _get_params(ret: structs.CarParams, candidate, fingerprint, car_fw, alpha_long, is_release, docs) -> structs.CarParams: # type: ignore
     ret.brand = "changan"
     ret.safetyConfigs = [get_safety_config(structs.CarParams.SafetyModel.changan)]
 
