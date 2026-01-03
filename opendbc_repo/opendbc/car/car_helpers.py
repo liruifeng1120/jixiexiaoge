@@ -21,7 +21,15 @@ def load_interfaces(brand_names):
   ret = {}
   for brand_name in brand_names:
     path = f'opendbc.car.{brand_name}'
-    CarInterface = __import__(path + '.interface', fromlist=['CarInterface']).CarInterface
+    try:
+      CarInterface = __import__(path + '.interface', fromlist=['CarInterface']).CarInterface
+    except Exception as e:
+      # Log and skip brands that fail to import (e.g., encrypted modules without runtime)
+      try:
+        carlog.error({"event": "load_interfaces_import_failed", "brand": brand_name, "error": str(e)})
+      except Exception:
+        print(f"Failed to import interface for brand {brand_name}: {e}")
+      continue
     for model_name in brand_names[brand_name]:
       ret[model_name] = CarInterface
   return ret
