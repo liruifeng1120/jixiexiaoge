@@ -209,8 +209,8 @@ def get_default_params():
     ("LateralAngleSpdBp2", "70"),
     ("LateralAngleSpdUp2", "15"),
     ("LateralAngleSpdDn2", "40"),
-    ("LateralAngleTorqMax", "30")
-    ("LateralAngleTorqCut", "10")
+    ("LateralAngleTorqMax", "30"),
+    ("LateralAngleTorqCut", "10"),
   ]
   return default_params
 
