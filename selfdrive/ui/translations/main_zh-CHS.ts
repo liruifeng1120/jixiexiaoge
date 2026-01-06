@@ -829,6 +829,46 @@
         <source>0: off, 1:accel, 2:decel, 3: all</source>
         <translation>0: 关闭, 1:仅加速, 2:仅减速, 3: 加速和减速</translation>
     </message>
+    <message>
+        <source>Angle Speed Up 0</source>
+        <translation>角速度上升0</translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 0</source>
+        <translation>角速度下降0</translation>
+    </message>
+    <message>
+        <source>Angle Speed BP 1 in km/h</source>
+        <translation>角速度调整车速1 (km/h)</translation>
+    </message>
+    <message>
+        <source>Angle Speed Up 1</source>
+        <translation>角速度上升1</translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 1</source>
+        <translation>角速度下降1</translation>
+    </message>
+    <message>
+        <source>Angle Speed BP 2 in km/h</source>
+        <translation>角速度调整车速2 (km/h)</translation>
+    </message>
+    <message>
+        <source>Angle Speed Up 2</source>
+        <translation>角速度上升2</translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 2</source>
+        <translation>角速度下降2</translation>
+    </message>
+    <message>
+        <source>Angle Mode Max Torque</source>
+        <translation>角度模式EPS最大力矩</translation>
+    </message>
+    <message>
+        <source>Angle Mode Start Cut Torque</source>
+        <translation>角度模式防对抗起始扭矩</translation>
+    </message>
 </context>
 <context>
     <name>ConfirmationDialog</name>

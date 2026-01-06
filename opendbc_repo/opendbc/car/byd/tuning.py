@@ -8,13 +8,7 @@ class Tuning:
   STEERING_ANGLE_OFFSET = 0
 
   #角度模式有效，比如海豹
-  ANGLE_SPEED_MAX = 600 # deg
-  ANGLE_SPEED_BP =   [0., 5.  , 15.]  # m/s
-  ANGLE_SPEED_UP =   [5., .8  , .15]  # deg/s
-  ANGLE_SPEED_DOWN = [5., 3.5 , 0.4]  # deg/s
-  LKAS_MAX_TORQUE = 2.4               # Nm
   STEER_THRESHOLD = 1.0               # Nm
-  MAX_STEER_ANGLE = 1310              # deg
 
   # modified stock long control 原车long控制的速度平滑百分比设定, 例如下面40米以内，则加速率是原来的70%，减速率是原来的100%
   K_ACCEL_BP       = [40,  50,  60,  70,  80]  # meters BP是离前车距离

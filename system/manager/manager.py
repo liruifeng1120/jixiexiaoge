@@ -201,7 +201,16 @@ def get_default_params():
     ("SpeedCorrect60", "0"),
     ("SpeedCorrect90", "0"),
     ("SpeedCorrect120", "0"),
-
+    ("LateralAngleSpdUp0", "500"),
+    ("LateralAngleSpdDn0", "500"),
+    ("LateralAngleSpdBp1", "30"),
+    ("LateralAngleSpdUp1", "80"),
+    ("LateralAngleSpdDn1", "350"),
+    ("LateralAngleSpdBp2", "70"),
+    ("LateralAngleSpdUp2", "15"),
+    ("LateralAngleSpdDn2", "40"),
+    ("LateralAngleTorqMax", "30")
+    ("LateralAngleTorqCut", "10")
   ]
   return default_params
 

@@ -142,6 +142,17 @@ inline static std::unordered_map<std::string, uint32_t> keys = {
     {"AuthExpireDate", PERSISTENT},
     {"DeviceAuthKey", PERSISTENT},
 
+    {"LateralAngleSpdUp0", PERSISTENT},
+    {"LateralAngleSpdDn0", PERSISTENT},
+    {"LateralAngleSpdBp1", PERSISTENT},
+    {"LateralAngleSpdUp1", PERSISTENT},
+    {"LateralAngleSpdDn1", PERSISTENT},
+    {"LateralAngleSpdBp2", PERSISTENT},
+    {"LateralAngleSpdUp2", PERSISTENT},
+    {"LateralAngleSpdDn2", PERSISTENT},
+    {"LateralAngleTorqMax", PERSISTENT},
+    {"LateralAngleTorqCut", PERSISTENT},
+
     // carrot
     {"LongitudinalPersonalityMax", PERSISTENT},
     {"NetworkAddress", CLEAR_ON_MANAGER_START},

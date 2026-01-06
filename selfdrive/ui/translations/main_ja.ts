@@ -813,6 +813,46 @@
         <source>0: off, 1:accel, 2:decel, 3: all</source>
         <translation type="unfinished"></translation>
     </message>
+    <message>
+        <source>Angle Speed Up 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 0</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed BP 1 in km/h</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed Up 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 1</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed BP 2 in km/h</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed Up 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Speed Down 2</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Mode Max Torque</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Angle Mode Start Cut Torque</source>
+        <translation type="unfinished"></translation>
+    </message>
 </context>
 <context>
     <name>ConfirmationDialog</name>
