@@ -7,9 +7,6 @@ class Tuning:
   #方向盘手动偏差
   STEERING_ANGLE_OFFSET = 0
 
-  #角度模式有效，比如海豹
-  STEER_THRESHOLD = 1.0               # Nm
-
   # modified stock long control 原车long控制的速度平滑百分比设定, 例如下面40米以内，则加速率是原来的70%，减速率是原来的100%
   K_ACCEL_BP       = [40,  50,  60,  70,  80]  # meters BP是离前车距离
 
