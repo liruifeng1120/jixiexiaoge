@@ -1102,7 +1102,7 @@
     </message>
     <message>
         <source>Update process started. Device will reboot if updates are applied.</source>
-        <translation type="vanished">后台开始更新了。如果成功下载更新则设备将自动重启。</translation>
+        <translation>后台开始更新了。如果成功下载更新则设备将自动重启。</translation>
     </message>
     <message>
         <source>Set default</source>
@@ -1155,10 +1155,6 @@
     <message>
         <source>Device Serial: &quot;%1&quot;</source>
         <translation>设备序列号：&quot;%1&quot;</translation>
-    </message>
-    <message>
-        <source>Syncing to latest version and rebooting...</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -2100,14 +2096,6 @@ This may take up to a minute.</source>
     <message>
         <source>Use external RedPanda instead of internal blackPanda</source>
         <translation>打开则使用外置红熊，关闭就用内置红熊</translation>
-    </message>
-    <message>
-        <source>Enable if you are Tengshi D9 low spec</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <source>If you have can error on D9, try turn this on.</source>
-        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
