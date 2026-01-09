@@ -1089,10 +1089,6 @@
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <source>Update process started. Device will reboot if updates are applied.</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
         <source>Set default</source>
         <translation>기본값으로 설정</translation>
     </message>
@@ -1146,6 +1142,10 @@
     </message>
     <message>
         <source>Device Serial: &quot;%1&quot;</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Syncing to latest version and rebooting...</source>
         <translation type="unfinished"></translation>
     </message>
 </context>
@@ -2167,6 +2167,14 @@ This may take up to a minute.</source>
     </message>
     <message>
         <source>Use external RedPanda instead of internal blackPanda</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>Enable if you are Tengshi D9 low spec</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <source>If you have can error on D9, try turn this on.</source>
         <translation type="unfinished"></translation>
     </message>
 </context>

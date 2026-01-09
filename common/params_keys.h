@@ -141,6 +141,7 @@ inline static std::unordered_map<std::string, uint32_t> keys = {
     {"SpeedCorrect120", PERSISTENT},
     {"AuthExpireDate", PERSISTENT},
     {"DeviceAuthKey", PERSISTENT},
+    {"BydD9LowSpec", PERSISTENT},
 
     {"LateralAngleSpdUp0", PERSISTENT},
     {"LateralAngleSpdDn0", PERSISTENT},

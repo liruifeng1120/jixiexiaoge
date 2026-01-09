@@ -190,6 +190,7 @@ def get_default_params():
     ("BydAutoTuning", "0"),
     ("BydLatUseSiglin", "1"),
     ("CameraOffset", "8"),
+    ("BydD9LowSpec", "0"),
     ("UseRedPanda", "1"),
     ("KeepLkasPassive", "0"),
     ("UseSteerRateLimiter", "1"),
