@@ -200,6 +200,11 @@ void ignition_can_hook(CANPacket_t *msg) {
       ignition_can = (msg->data[0] >> 5) == 0x6U;
       ignition_can_cnt = 0U;
     }
+    // Changan
+    if ((msg->addr == 0x28B) && (len == 8)) {
+      ignition_can = ((msg->data[4] >> 2) & 0x03) == 0x02U;
+      ignition_can_cnt = 0U;
+    }
 
   }
 }

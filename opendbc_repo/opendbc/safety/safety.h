@@ -26,6 +26,7 @@
 #include "opendbc/safety/modes/elm327.h"
 #include "opendbc/safety/modes/body.h"
 #include "opendbc/safety/modes/psa.h"
+#include "opendbc/safety/modes/changan.h"
 
 #ifdef CANFD
 #include "opendbc/safety/modes/hyundai_canfd.h"
@@ -463,6 +464,7 @@ int set_safety_hooks(uint16_t mode, uint16_t param) {
     {SAFETY_SUBARU_PREGLOBAL, &subaru_preglobal_hooks},
     {SAFETY_VOLKSWAGEN_MLB, &volkswagen_mlb_hooks},
     {SAFETY_VOLKSWAGEN_PQ, &volkswagen_pq_hooks},
+    {SAFETY_CHANGAN, &changan_hooks},
     {SAFETY_ALLOUTPUT, &alloutput_hooks},
 #endif
   };

@@ -13,6 +13,13 @@ export VECLIB_MAXIMUM_THREADS=1
 # in order to run ui at 60fps (16.67ms), we need to allow
 # it to preempt the model workloads. we have enough
 # headroom for this until ui is moved to the CPU.
+
+export FINGERPRINT="CHANGAN_Z6"
+#export FINGERPRINT="CHANGAN_Z6_IDD"
+export SKIP_FW_QUERY="1"
+
+export BIG=1
+
 export QCOM_PRIORITY=12
 
 if [ -z "$AGNOS_VERSION" ]; then
