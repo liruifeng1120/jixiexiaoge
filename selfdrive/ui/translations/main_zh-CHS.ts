@@ -248,6 +248,14 @@
         <translation>0:关闭, 1:仅停车, 2:停走</translation>
     </message>
     <message>
+        <source>AChangeCostStarting</source>
+        <translation>加速度变化起始成本</translation>
+    </message>
+    <message>
+        <source>TrafficStopDistanceAdjust</source>
+        <translation>红绿灯停止距离调整</translation>
+    </message>
+    <message>
         <source>Laneline mode speed(0)</source>
             <translation>车道线模式速度(0)</translation>
     </message>
@@ -774,6 +782,30 @@
     <message>
         <source>ATC Auto Map Change(0)</source>
         <translation>ATC 自动地图切换(0)</translation>
+    </message>
+    <message>
+        <source>Share Data</source>
+        <translation>共享数据</translation>
+    </message>
+    <message>
+        <source>Hardware is C3x Lite</source>
+        <translation>硬件是 C3x Lite</translation>
+    </message>
+    <message>
+        <source>0:None, 1:TCP JSON Data(Reboot required)</source>
+        <translation>0:无, 1:TCP JSON 数据(需要重启)</translation>
+    </message>
+    <message>
+        <source>Smart Speed Control(0)</source>
+        <translation>智能速度控制(0)</translation>
+    </message>
+    <message>
+        <source>0: off, 1:accel, 2:decel, 3: all</source>
+        <translation>0:关闭, 1:加速, 2:减速, 3:全部</translation>
+    </message>
+    <message>
+        <source>Model TurnSpeed Factor(0)</source>
+        <translation>模型转弯速度系数(0)</translation>
     </message>
 </context>
 <context>
