@@ -130,7 +130,8 @@ BO_ 578 CAM_LANETRACK: 8 XXX
  SG_ CTR : 7|4@0+ (1,0) [0|15] "" XXX
  SG_ LINE2 : 9|10@0+ (1,-686) [0|255] "" XXX
  SG_ LANE_CURVE : 31|8@0+ (1,-127) [0|255] "" XXX
- SG_ SIG1 : 39|8@0+ (1,-128) [0|255] "" XXX
+ SG_ LANE_LEFT : 38|1@0+ (1,0) [0|1] "" XXX
+ SG_ LANE_RIGHT : 39|1@0+ (1,0) [0|1] "1 = Solid 0 = Broken" XXX
  SG_ SIG2 : 47|8@0+ (1,0) [0|255] "" XXX
  SG_ SIG3 : 55|2@0+ (1,0) [0|3] "" XXX
  SG_ LINE1 : 3|10@0+ (1,-686) [0|1] "" XXX

@@ -20,7 +20,7 @@ class CarState(CarStateBase):
     self.low_speed_alert = False
     self.lkas_allowed_speed = False
     self.lkas_disabled = False
-    
+
     self.prev_distance_button = 0
     self.distance_button = 0
 
@@ -32,7 +32,7 @@ class CarState(CarStateBase):
 
     self.prev_distance_button = self.distance_button
     self.distance_button = cp.vl["CRZ_BTNS"]["DISTANCE_LESS"]
-    
+
     self.prev_cruise_buttons = self.cruise_buttons
 
     if bool(cp.vl["CRZ_BTNS"]["SET_P"]):
@@ -43,7 +43,7 @@ class CarState(CarStateBase):
       self.cruise_buttons = Buttons.RESUME
     else:
       self.cruise_buttons = Buttons.NONE
-      
+
     ret.wheelSpeeds = self.get_wheel_speeds(
       cp.vl["WHEEL_SPEEDS"]["FL"],
       cp.vl["WHEEL_SPEEDS"]["FR"],
@@ -132,9 +132,14 @@ class CarState(CarStateBase):
     self.cam_laneinfo = cp_cam.vl["CAM_LANEINFO"]
     ret.steerFaultPermanent = cp_cam.vl["CAM_LKAS"]["ERR_BIT_1"] == 1
 
+    # lane line signals
+    lane_lines = cp_cam.vl["CAM_LANEINFO"]["LANE_LINES"]
+    ret.leftLaneLine = int(cp_cam.vl["CAM_LANETRACK"]["LANE_LEFT"]) if lane_lines in (2, 3) else -1
+    ret.rightLaneLine = int(cp_cam.vl["CAM_LANETRACK"]["LANE_RIGHT"]) if lane_lines in (2, 4) else -1
+
     self.lkas_previously_enabled = self.lkas_enabled
     self.lkas_enabled = not self.lkas_disabled
-    
+
     # TODO: add button types for inc and dec
     #ret.buttonEvents = create_button_events(self.distance_button, prev_distance_button, {1: ButtonType.gapAdjustCruise})
     ret.buttonEvents = [
