@@ -2469,6 +2469,8 @@ This may take up to a minute.</source>
         <translation>忽略</translation>
     </message>
 </context>
+<context>
+    <name>SettingsWindow</name>
     <message>
         <source>Share Data</source>
         <translation>分享数据</translation>
@@ -2581,4 +2583,5 @@ This may take up to a minute.</source>
         <source>Display debug UI elements.</source>
         <translation>显示调试 UI 元素。</translation>
     </message>
+</context>
 </TS>

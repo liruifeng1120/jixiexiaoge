@@ -1,11 +1,9 @@
 Carrot2-v9 (2026-01-xx)
 ========================
-* WMI model
-* Activate corner radar(HDA2)
-* fix Angle Steering(HKG car)
-* Keep blinker while LaneChange
-* Speed based TF adjustment
-* Sorento HEV 4WD(Niro HEV), Long bug fix.
+车型选择支持了 特斯拉 本田 福特 林肯 大众 斯柯达 奥迪
+修复了大众车型的代码问题
+移除了对 长安 车型的支持
+修复了编译报错！
 
 Carrot2-v9 (2025-12-06)
 ========================

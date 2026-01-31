@@ -569,7 +569,8 @@ protected:
         *pvd = left_points + right_points;
     }
 };
-class PathEndDrawer : ModelDrawer {
+class PathEndDrawer : public ModelDrawer {
+    Q_OBJECT
 private:
     QPointF path_end_left_vertex;
     QPointF path_end_right_vertex;
