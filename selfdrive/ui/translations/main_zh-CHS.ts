@@ -2469,4 +2469,116 @@ This may take up to a minute.</source>
         <translation>忽略</translation>
     </message>
 </context>
+    <message>
+        <source>Share Data</source>
+        <translation>分享数据</translation>
+    </message>
+    <message>
+        <source>0:None, 1:TCP JSON Data(Reboot required)</source>
+        <translation>0:无, 1:TCP JSON数据(需重启)</translation>
+    </message>
+    <message>
+        <source>Hardware is C3x Lite</source>
+        <translation>硬件为 C3x Lite</translation>
+    </message>
+    <message>
+        <source>Hardware is C3x</source>
+        <translation>硬件为 C3x</translation>
+    </message>
+    <message>
+        <source>Hardware is C3</source>
+        <translation>硬件为 C3</translation>
+    </message>
+    <message>
+        <source>Hardware is TICI</source>
+        <translation>硬件为 TICI</translation>
+    </message>
+    <message>
+        <source>Hardware is EON</source>
+        <translation>硬件为 EON</translation>
+    </message>
+    <message>
+        <source>Hardware is Unknown</source>
+        <translation>硬件未知</translation>
+    </message>
+    <message>
+        <source>Open SSH</source>
+        <translation>开启 SSH</translation>
+    </message>
+    <message>
+        <source>Record UI</source>
+        <translation>录制 UI</translation>
+    </message>
+    <message>
+        <source>Stop Recording UI</source>
+        <translation>停止录制 UI</translation>
+    </message>
+    <message>
+        <source>Reset UI</source>
+        <translation>重置 UI</translation>
+    </message>
+    <message>
+        <source>Developer Menu</source>
+        <translation>开发者菜单</translation>
+    </message>
+    <message>
+        <source>Reset Calibration</source>
+        <translation>重置校准</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to reset calibration?</source>
+        <translation>您确定要重置校准吗？</translation>
+    </message>
+    <message>
+        <source>Review Training Guide</source>
+        <translation>查看训练指南</translation>
+    </message>
+    <message>
+        <source>Regulatory</source>
+        <translation>监管信息</translation>
+    </message>
+    <message>
+        <source>Change Language</source>
+        <translation>修改语言</translation>
+    </message>
+    <message>
+        <source>Are you sure you want to reset all settings?</source>
+        <translation>您确定要重置所有设置吗？</translation>
+    </message>
+    <message>
+        <source>Reset</source>
+        <translation>重置</translation>
+    </message>
+    <message>
+        <source>Disengaged</source>
+        <translation>控制取消</translation>
+    </message>
+    <message>
+        <source>Engaged</source>
+        <translation>控制激活</translation>
+    </message>
+    <message>
+        <source>Warning</source>
+        <translation>警告</translation>
+    </message>
+    <message>
+        <source>Critical</source>
+        <translation>严重</translation>
+    </message>
+    <message>
+        <source>openpilot Longitudinal Control (Alpha)</source>
+        <translation>openpilot 纵向控制 (Alpha)</translation>
+    </message>
+    <message>
+        <source>WARNING: openpilot longitudinal control is in alpha for this car and will take over the gas and stop buttons. Look for once it has been tested and verified.</source>
+        <translation>警告：此车辆的 openpilot 纵向控制处于 alpha 阶段，将接管加速和停止按钮。请等待测试和验证完成。</translation>
+    </message>
+    <message>
+        <source>Show Debug UI</source>
+        <translation>显示调试 UI</translation>
+    </message>
+    <message>
+        <source>Display debug UI elements.</source>
+        <translation>显示调试 UI 元素。</translation>
+    </message>
 </TS>
