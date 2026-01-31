@@ -73,6 +73,11 @@ class CAR(Platforms):
   MAZDA_CX5_2022 = MazdaPlatformConfig(
     [MazdaCarDocs("Mazda CX-5 2022-25")],
     MAZDA_CX5.specs,
+    fingerprint={
+      Bus.pt: {
+        1115: 8, 254: 8, 357: 8, 514: 8, 577: 8,
+      }
+    }
   )
 
 
